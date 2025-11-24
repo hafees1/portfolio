@@ -1,0 +1,176 @@
+/* Dark Theme CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #e0e0e0;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+#aboutme h3 {
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #cccccc;   
+}
+
+/* Navigation */
+nav {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #00bcd4;
+    transform: scale(1.15);
+}
+
+/* Image */
+img {
+    display: block;
+    margin: 25px auto;
+    width: 200px;       /* adjust size if needed */
+    height: 200px;      /* square for perfect circle */
+    border-radius: 50%; /* circular */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect: subtle lift */
+img:hover {
+    transform: scale(1.03); /* slight zoom */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* soft shadow, professional look */
+}
+
+
+
+/* Sections with hover effects */
+section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 25px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #222;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect: slight zoom, highlight glow, border color change */
+section:hover {
+    transform: scale(1.02) translateY(-4px);
+    background-color: #151515;
+    border-color: #00bcd4;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.35);
+}
+
+h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+h3, li, dd {
+    color: #cccccc;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 6px 0;
+}
+
+/* Form */
+form input {
+    margin: 8px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* Table */
+table {
+    width: 80%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background-color: #111;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #00bcd4;
+    color: #000;
+    font-weight: bold;
+}
+
+td {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #222;
+    margin: 25px 0;
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+    padding: 15px;
+    color: #888;
+}
+
+/* Background particles */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(white 1px, transparent 1px),
+                      radial-gradient(white 0.8px, transparent 0.8px),
+                      radial-gradient(white 1.2px, transparent 1.2px);
+    background-size: 30px 30px, 40px 40px, 50px 50px; /* spacing between dots */
+    background-position: 0 0, 10px 15px, 20px 5px;
+    opacity: 0.2;          /* subtle */
+    z-index: -1;            /* behind everything */
+    animation: fall 50s linear infinite;
+}
+
+@keyframes fall {
+    0% { background-position: 0 0, 10px 15px, 20px 5px; }
+    100% { background-position: 0 1200px, 10px 1215px, 20px 1205px; }
+}
